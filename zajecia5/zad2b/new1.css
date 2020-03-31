@@ -1,0 +1,25 @@
+/*tło z obrazkiem*/
+.back {
+background: url("zdj1.jpg") center no-repeat;
+background-size: contain;
+margin: auto;
+width: 1500px;
+height: 800px;
+position: relative;
+padding: 0;
+}
+/*style do tekstu, tło w postaci koloru*/
+.text {
+color: white;
+border: 4px solid;
+background: rgb(59, 2, 6);
+mix-blend-mode: overlay;
+font-family: Arial;
+font-size: 64pt;
+font-weight: bolder;
+text-align: center;
+margin: 0;
+position: absolute;
+top: 550px;
+left: 200px;
+}

@@ -1,0 +1,93 @@
+/*czyszczenie ustawień przeglądarki*/
+* {
+margin: 0;
+padding: 0;
+}
+/*ustawienie ogólne dla ciała dokumentu*/
+body {
+font-family: 'Liu Jian Mao Cao', cursive;
+font-size: 100%;
+margin: 3em;
+background-color: #666;
+color: #fff;
+}
+h2, p {
+font-size: 100%;
+font-weight: normal;
+}
+ul {
+list-style-type: none;
+overflow: hidden;
+padding: 3em;
+}
+ul li a {
+text-decoration: none;
+color: #000;
+background-color: #ffc; /*wszystkie karteczki na razie mają kolor żółty*/
+display: block;
+height: 20em;
+
+width: 20em;
+padding: 1em;
+box-shadow: 5px 5px 7px rgba(33,33,33,.7); /*dodanie cienia*/
+}
+ul li {
+margin: 1em;
+float: left; /*poziome ustawienie karteczek*/
+}
+ul li h2 {
+font-size: 140%;
+font-weight: bold;
+padding-bottom: 10px;
+}
+/*czcionka z https://fonts.google.com link do czcionki znajduje się w nagłówku htmla*/
+ul li p {
+font-family: 'Liu Jian Mao Cao', cursive;
+font-size: 100%;
+}
+ul li a { 
+ text-decoration: none;  
+ color: #000;  
+ background-color: #ffc; 
+ /*wszystkie karteczki na razie mają kolor żółty*/  
+ display: block; 
+ height: 20em;  
+ width: 20em;  
+ padding: 1em;  
+ box-shadow: 5px 5px 7px rgba(33,33,33,.7); 
+ /*dodanie cienia*/  
+ transform: rotate(-6deg); 
+ /*dołożenia łagodnego przejścia, kiedy najeżdżamy myszką na karteczkę
+zastosowane do właściwości transform - przeskalowanie, bo transform w hover*/
+transition: transform .15s linear;
+
+ /*dodanie rotacji*/ } 
+ ul li:nth-child(even) a{
+transform: rotate(4deg);
+position: relative;
+top: 5px;
+background-color: #cfc;
+}
+/*co trzecia karteczka przekrzywiona i podniesiona do góry (-5px)*/
+ul li:nth-child(3n) a {
+transform: rotate(-3deg);
+position: relative;
+top: -5px;
+background-color: #ccf;
+}
+/*co piąta karteczka*/
+ul li:nth-child(5n) a {
+transform: rotate(-6deg);
+position: relative;
+top: 10px;
+}
+
+/* dodanie reakcji na najechanie myszą - powiększenie */
+ul li a:hover {
+box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+transform: scale(1.15); /*przeskalowanie - powiększenie*/
+position: relative;
+z-index: 1; /* położenie karteczek na górze, na stosie */
+}
+
+ 

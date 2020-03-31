@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- pierwszy kontener -->
+<div id="TrescSkrocona_1"><div><b>Treść 1 niepełna</b></div></div>
+<div id="TrescPelna_1" style="display:none;"><div><b>Treść 1 niepełna</b></div>Tresc 1 pełna</div>
+<div id="PrzyciskPokaz_1" onclick="PokazUkryjTekst('Pokaz',1);" style="cursor:pointer;">Pokaż</div>
+<div id="PrzyciskUkryj_1" onclick="PokazUkryjTekst('Ukryj',1);" style="display:none; cursor:pointer;">Ukryj</div>
+<!-- drugi kontener -->
+<div id="TrescSkrocona_2"><div><b>Treść 2 niepełna</b></div></div>
+<div id="TrescPelna_2" style="display:none;"><div><b>Treść 2 niepełna</b></div>Tresc 2 pełna</div>
+<div id="PrzyciskPokaz_2" onclick="PokazUkryjTekst('Pokaz',2);" style="cursor:pointer;">Pokaż</div>
+<div id="PrzyciskUkryj_2" onclick="PokazUkryjTekst('Ukryj',2);" style="display:none; cursor:pointer;">Ukryj</div>
+<script>
+function PokazUkryjTekst(polecenie,id) {
+    var PrzyciskPokaz = document.getElementById('PrzyciskPokaz_' + id);
+    var PrzyciskUkryj = document.getElementById('PrzyciskUkryj_' + id);
+    var TrescSkrocona = document.getElementById('TrescSkrocona_' + id);
+    var TrescPelna = document.getElementById('TrescPelna_' + id);
+	if (polecenie == 'Pokaz') {
+		PrzyciskPokaz.style.display = 'none';
+		PrzyciskUkryj.style.display = 'block';
+		TrescSkrocona.style.display = 'none';
+		TrescPelna.style.display = 'block';
+	} 
+	else if (polecenie == 'Ukryj') {
+		PrzyciskPokaz.style.display = 'block';
+		PrzyciskUkryj.style.display = 'none';
+		TrescSkrocona.style.display = 'block';
+		TrescPelna.style.display = 'none';
+	}
+}
+</script>
+</body>
+</html>

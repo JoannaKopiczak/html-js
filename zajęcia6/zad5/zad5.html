@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body> 
+<div style='font-size:200%' id="text1"><b>Pierwszy element na stronie</b></div>   
+<script>	
+	let div=document.getElementById("text1");
+	let pierwszy= document.createElement('p');
+	pierwszy.textContent='Pierwszy';
+	let drugi= document.createElement('p');
+	drugi.textContent='Drugi';
+	div.appendChild(pierwszy);
+	div.insertBefore(drugi,pierwszy);
+</script>
+</body>
+</html>
